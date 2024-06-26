@@ -7,7 +7,7 @@ import {
   CardBody,
   CardFooter,
   Typography,
-  Button,
+  IconButton,
 } from "@material-tailwind/react";
 
 interface ProfileProps {
@@ -19,8 +19,34 @@ interface ProfileProps {
 
 const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
   return (
-    <Card color="gray" className="shadow-lg text-center w-96">
-      <CardBody>
+    <Card color="gray" className="shadow-lg w-96">
+      <CardHeader
+        floated={false}
+        color="gray"
+        className="flex flex-row-reverse h-16 py-2 px-2"
+      >
+        <a href="https://www.linkedin.com/in/schan3ed/" target="_blank">
+          <IconButton
+            className="rounded-full"
+            size="md"
+            variant="text"
+            color="white"
+          >
+            <i className="fab fa-linkedin fa-2x" />
+          </IconButton>
+        </a>
+        <a href="https://github.com/schan3Ed" target="_blank">
+          <IconButton
+            className="rounded-full"
+            size="md"
+            variant="text"
+            color="white"
+          >
+            <i className="fab fa-github-alt fa-2x" />
+          </IconButton>
+        </a>
+      </CardHeader>
+      <CardBody className="text-center mb-10">
         <img
           src="/images/myhead.png"
           alt="my face"
@@ -38,20 +64,28 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
           </div>
         </div>
       </CardBody>
-      <CardFooter className="grid grid-cols-2 mx-auto gap-10 mb-8">
-        <a href="https://www.linkedin.com/in/schan3ed/">
-          <img
-            src="/icons/linkedin.svg"
-            className="w-8 rounded-lg invert mx-auto"
-            alt="LinkedIn"
-          />
+      <CardFooter className="grid grid-cols-2 mx-auto gap-20 mb-8">
+        <a href="">
+          <IconButton
+            variant="gradient"
+            color="red"
+            size="lg"
+            className="rounded-full scale-150"
+            ripple={true}
+          >
+            <i className="fas fa-voicemail" />
+          </IconButton>
         </a>
-        <a href="https://github.com/schan3Ed">
-          <img
-            src="/icons/github.svg"
-            className="w-8 rounded-lg invert mx-auto"
-            alt="Github"
-          />
+        <a href="">
+          <IconButton
+            variant="gradient"
+            color="green"
+            size="lg"
+            className="rounded-full scale-150"
+            ripple={true}
+          >
+            <i className="fa fa-phone fa-lg" />
+          </IconButton>
         </a>
       </CardFooter>
     </Card>

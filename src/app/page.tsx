@@ -8,7 +8,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-gray-700 flex items-center justify-center">
+    <div className="h-screen bg-gray-600 flex items-center justify-center">
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
